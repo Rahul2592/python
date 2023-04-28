@@ -1,0 +1,21 @@
+{% extends 'ors/Base.html' %}
+{%load static %}
+<link href="{%static 'ors/css/style.css'%}" rel="stylesheet">
+{%block title%}
+<title>Home</title>
+{%endblock%}
+
+{%block body%}
+<div class="container" style="margin-top:90px; margin-bottom:80px">
+   {%include 'ors/Header.html'%}
+   <h1>Welcome {{Name}}</h1>
+
+   <ul class="pagination">
+      <li><a href="{%url 'ADD'%}">Add Marksheet</a></li>
+      <li><a href="{%url 'GETM'%}">Get Marksheet</a></li>
+      <li><a href="{%url 'GETAll'%}">GetAll</a></li>
+      <li><a href="{%url 'LOGOUT'%}">LogOut</a></li>
+   </ul>
+ 
+</div>
+{%endblock%}

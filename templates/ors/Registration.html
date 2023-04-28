@@ -1,0 +1,18 @@
+{% extends 'ors/Base.html' %}
+{% block title %}
+<title>Registration</title>
+{% endblock  %}
+{% block body %}
+{% include 'ors/Header.html' %}
+<div class="container" style="margin-top:80px; margin-bottom:80px;">
+<h1>Registration Form</h1>
+    <form action="{% url 'ADD' %}" method="POST">
+        {% csrf_token %}
+
+{{FORM.as_p}}
+<input type="submit" value="ADD" class="btn btn-info">
+</form>
+
+</div>
+{% include 'ors/Footer.html' %}
+{% endblock  %}
